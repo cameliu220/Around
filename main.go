@@ -110,7 +110,7 @@ func handlerSearch(w http.ResponseWriter, r *http.Request) {
             ran = val + "km"
       }
 
-      fmt.Printf(w, "Search received: %f %f %s", lat, lon, ran)
+      //fmt.Printf(w, "Search received: %f %f %s", lat, lon, ran)
 
       // Create a client
       client, err := elastic.NewClient(elastic.SetURL(ES_URL), elastic.SetSniff(false))
@@ -203,4 +203,3 @@ func main() {
       log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
-
